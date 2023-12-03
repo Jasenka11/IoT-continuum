@@ -4,7 +4,7 @@ import json
 #import argparse
 
 # rabbit
-ip_rabbit = "134.169.115.113"
+ip_rabbit = "SERVER_IP"
 port_rabbit = 60040
 user_rabbit = "user"
 pass_rabbit = "password"
@@ -14,7 +14,7 @@ queue_rabbit = "keh_queue"
 # put 0 for off 
 rssiThreshold = -50
 # mosquitto
-ip_mosquitto = "192.168.1.5"
+ip_mosquitto = "RaspberryPi_IP"
 topic_mosquitto_lora = "LoRa"
 queuedLoraMsg = []
 
@@ -27,7 +27,7 @@ mqtt_client.message = None
 mqttc = mqtt_client.connect(ip_mosquitto)
 mqttc.subscribe(topic_mosquitto_lora)
 
-# logic for forwarding incoming lora messages based on a threshold rssi value
+# processing incoming LoRa messages based on a threshold rssi value
 def forwarding(rssiThreshold, rssiVal, payload, queuedLoraMsg):
         # if rssi value of new message is bigger then the threshold, publish that message immedialtely
         if  rssiVal >= rssiThreshold:
