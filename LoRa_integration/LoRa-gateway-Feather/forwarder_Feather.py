@@ -4,7 +4,7 @@ import lora_client
 import json
 
 # rabbit
-ip_rabbit = "134.169.115.113"
+ip_rabbit = "SERVER_IP"
 port_rabbit = 60040
 user_rabbit = "user"
 pass_rabbit = "password"
