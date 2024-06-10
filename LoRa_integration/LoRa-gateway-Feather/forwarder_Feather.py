@@ -12,7 +12,7 @@ exchange_rabbit = "amq.topic"
 r_key_rabbit = "lora_key"
 queue_rabbit = "lora_queue"
 # mosquitto
-ip_mosquitto = "192.168.1.5"
+ip_mosquitto = "RaspberryPi_IP"
 topic_mosquitto = "keh_lora_topic"
 USE_MQTT = True
 # connect to rabbitmq
